@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SB Admin 2 - Tables</title>
+
+  <!-- Custom fonts for this template -->
+  <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/js/table.js"></script>
+  <!-- Custom styles for this template -->
+  <link href="/static/css/sb-admin-2.css" rel="stylesheet">
+  <link href="/static/css/table-page.css" rel="stylesheet">
+  
+  <!-- Custom styles for this page -->
+  <link href="/static/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <style>
+    #voltmotorImage{
+        -ms-transform: rotate(15deg); /* IE 9 */
+      -webkit-transform: rotate(15deg); /* Chrome, Safari, Opera */
+      transform: rotate(15deg);
+    }
+    </style>
+    
+</head>
+
+<body id="page-top">
+  
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+          <div class="sidebar-brand-icon rotate-n-15">
+            <i >
+                <img id="voltmotorImage"itemprop="image" class="normal" src="https://voltmotor.com.tr/wp-content/uploads/2017/08/volt-elektrik-logo.png" alt="Logo">
+            </i>
+          </div>
+          <div class="sidebar-brand-text mx-3"></div>
+        </a>
+  
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+  
+        <li class="nav-item"> 
+          <a class="nav-link" href="tables.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Motor   List</span></a>
+        </li>
+        <!-- Nav Item - Dashboard -->
+        
+  
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+  
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+  
+      </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column ">
+    <div id="content " class="table-main">
+      <!-- Main Content -->
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4 col-lg-12 col-md-12 col-sm-12 col-md-12">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Remote Motor Monitoring</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>SERIAL NO &emsp;&emsp;#</th>
+                      <th>POWER (Kw)</th>
+                      <th>SPEED (rpm)</th>
+                      <th>FRAME SIZE</th>
+                      <th>TYPE</th>
+                      <th>EFFICIENCY</th>
+                      <th>VOLTAGE</th>
+                      <th>FREQUENCY</th>
+                      <th>DUTY TYPE</th>
+                      <th>INSULATION CLASS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table-row">
+                      <td><img src="/static/img/voltmotort11.png" alt="" style="width:90%;height:auto;"></td>
+                      <td>MP0300720</td>	
+                      <td>110</td>							
+                      <td>1500</td>
+                      <td>315 S</td>
+                      <td>B3</td>
+                      <td>IE3</td>
+                      <td>400</td>  
+                      <td>50</td>
+                      <td>S1</td>
+                      <td>F</td></a>
+                    </tr>               
+                    <tr class="table-row">
+                      <td><img src="/static/img/voltmotort11.png" alt="" style="width:90%;height:auto;"></td>
+                      <td>MP0300721</td>
+                      <td>160	</td>
+                      <td>3000</td>
+                      <td>315 L	</td>
+                      <td>B3	</td>
+                      <td>IE3	</td>
+                      <td>400	</td>
+                      <td>50</td>
+                      <td>S1</td>
+                      <td>F</td>
+                    </tr>
+                    <tr class="table-row" >
+                      <td><img src="/static/img/voltmotort11.png" alt="" style="width:90%;height:auto;"></td>
+                      <td>MP0300722</td>
+                      <td>75</td>
+                      <td>1500</td>
+                      <td>280 S</td>
+                      <td>B35	</td>
+                      <td>IE3	</td>
+                      <td>400	</td>
+                      <td>50</td>
+                      <td>S1</td>
+                      <td>F</td>
+                    </tr>
+                    <tr class="table-row" >
+                        <td><img src="/static/img/voltmotort11.png" alt="" style="width:90%;height:auto;"></td>
+                        <td>MP0300723</td>
+                        <td>110	</td>
+                       <td>3000	</td>
+                       <td>315 S</td>	
+                       <td>B3	</td>
+                       <td>IE3</td>	
+                       <td>400</td>	
+                       <td>50	</td>
+                       <td>S1	</td>
+                       <td>F</td>
+                    </tr>
+                    <tr class="table-row" >
+                    <td><img src="/static/img/voltmotort11.png" alt="" style="width:90%;height:auto;"></td >
+                      <td>MP0300724</td>
+                      <td>90</td>
+                     <td>1500	</td>
+                     <td>280 M	</td>
+                     <td>B3	</td>
+                     <td>IE3</td>	
+                     <td>400</td>	
+                     <td>50	</td>
+                     <td>S1	</td>
+                     <td>F</td>
+                    </tr>
+                    <tr class="table-row" >
+                      <td><img src="/static/img/voltmotort11.png" alt="" style="width:90%;height:auto;"></td >
+                        <td>MP0300725</td>
+                        <td>90</td>
+                       <td>1500	</td>
+                       <td>280 M	</td>
+                       <td>B3	</td>
+                       <td>IE3</td>	
+                       <td>400</td>	
+                       <td>50	</td>
+                       <td>S1	</td>
+                       <td>F</td>
+                      </tr>
+                      <tr class="table-row" >
+                        <td><img src="/static/img/voltmotort11.png" alt="" style="width:90%;height:auto;"></td >
+                          <td>MP0300726</td>
+                          <td>90</td>
+                         <td>1500	</td>
+                         <td>280 M	</td>
+                         <td>B3	</td>
+                         <td>IE3</td>	
+                         <td>400</td>	
+                         <td>50	</td>
+                         <td>S1	</td>
+                         <td>F</td>
+                        </tr>
+                        <tr class="table-row" >
+                          <td><img src="/static/img/voltmotort11.png" alt="" style="width:90%;height:auto;"></td >
+                            <td>MP0300727</td>
+                            <td>90</td>
+                           <td>1500	</td>
+                           <td>280 M	</td>
+                           <td>B3	</td>
+                           <td>IE3</td>	
+                           <td>400</td>	
+                           <td>50	</td>
+                           <td>S1	</td>
+                           <td>F</td>
+                          </tr>
+                          <tr class="table-row" >
+                            <td><img src="/static/img/voltmotort11.png" alt="" style="width:90%;height:auto;"></td >
+                              <td>MP0300728</td>
+                              <td>90</td>
+                             <td>1500	</td>
+                             <td>280 M	</td>
+                             <td>B3	</td>
+                             <td>IE3</td>	
+                             <td>400</td>	
+                             <td>50	</td>
+                             <td>S1	</td>
+                             <td>F</td>
+                            </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        <!-- /.container-fluid -->
+      </div>
+      </div>
+      <!-- End of Main Content -->
+   
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+    <!-- Custom scripts for all pages-->
+    <script src="/static/js/core/sb-admin-2.min.js"></script>
+  
+
+</body>
+
+</html>

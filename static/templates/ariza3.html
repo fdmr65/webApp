@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="css/mainpage.css" rel="stylesheet" type="text/css">
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+  <script src="js/core/canvasjs.min.js"></script>
+  <script src="js/area-graphic.js"></script> 
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="js/core/jquery.gauge.js"></script>
+  <script src="js/gauge1.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/ariza3.js"></script>
+  <title>Motor Takip</title>
+</head>
+<body >
+  <!-- Page Wrapper -->
+  <div id="wrapper"> 
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i >
+              <img id="voltmotorImage"itemprop="image" class="normal" src="https://voltmotor.com.tr/wp-content/uploads/2017/08/volt-elektrik-logo.png" alt="Logo">
+          </i>
+        </div>
+        <div class="sidebar-brand-text mx-3"></div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item"> 
+        <a class="nav-link" href="tables.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Motor List</span></a>
+      </li>
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Motor Dashboard</span></a>
+      </li>
+      <!-- Nav Item - Tables -->
+      
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+      <!-- Main-->
+      <div class="main-panel">
+        <div class="container">
+          <div class="mb-2">
+           </div>
+          <!-- Content Row -->
+          <div class="row" >
+            <div class="card mb-2 col-lg-6 col-md-6 col-sm-6 col-xs-6 bg-dark " >
+              <div class="row no-gutters">
+                    <img src="img/voltmotort11.png" class="col-lg-4" alt="Örnek Resim" >
+                  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div class="card-body">
+                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <h5 class="card-title">Motor Specifications</h5>          
+                          <table class="table table-sm table-dark" id="propertiesMotor">
+                                          <tbody>
+                                            
+                                          </tbody>
+                           </table>
+                    </div>
+                  </div>
+                </div>     
+               </div>   
+            </div>
+            <div class="card bg-dark mb-2 col-lg-6 col-md-6 col-sm-6 col-xs-6 " >
+                <div class="card-body">
+                  <h4 class="card-title">Motor Status</h5>
+                  <table class="table table-sm table-dark ">
+                    <thead>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">#</th>
+                        <td>Current Status</td>
+                        <td id="status" style="color:#ffff11">Warning</td>
+                        
+                      </tr>
+                      <tr class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <th scope="row">#</th>
+                        <td>Anomaly Status</td>
+                        <td id="yanip-sonen"> <img  id ="image_status" src="img/clock.png" style="top:auto; left:auto; height:auto; width:5% ; position:absolute;"> </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#</th>
+                        <td >Plan Maintenance Before</td>
+                        <td style="color: #ffff11;">167.2 hours</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">#</th>
+                        <td >Problem Type</td>
+                        <td style="color: #ffff11;">Stator Failure Expected</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+          </div>
+          <div class="row ">  
+              <div class="card mb-2 col-lg-4 col-md-4 col-sm-4 col-xs-4 bg-dark " >
+                   <div class="card-body">
+                        <h5 class="card-title">Motor Anomaly Status</h5>
+                        <canvas id="gauge3" width="360" height="200"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > </canvas>     
+                        <H3 id="gaugeText3" ></H3>                
+                      </div>   
+              </div> 
+              <div class="card mb-2 col-lg-4 col-md-4 col-sm-4 col-xs-4 bg-dark " >
+                <div class="card-body">
+                     <h5 class="card-title">Temperature Anomaly Status</h5>
+                     <canvas id="gauge1" width="360" height="200"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > </canvas>     
+                     <H3 id="gaugeText1" ></H3>                
+                   </div>   
+               </div> 
+               <div class="card mb-2 col-lg-4 col-md-4 col-sm-4 col-xs-4 bg-dark " >
+                <div class="card-body">
+                     <h5 class="card-title">Vibration Anomaly Status</h5>
+                     <canvas id="gauge2" width="360" height="200"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > </canvas>     
+                     <H3 id="gaugeText2" ></H3>                
+              </div>   
+           </div> 
+          </div>
+          <div class="row ">  
+               <div class="card mb-2 col-lg-6 col-md-6 col-sm-6 col-xs-6 bg-dark " >
+                  <div class="card-body">
+                       <h5 class="card-title">Temperature Data&emsp;&emsp;&emsp;</h5>
+                       <div id="chartContainer1" style="height: 200px; width: 100%;"></div>
+                       
+                </div>     
+              </div>
+              <div class="card mb-2 col-lg-6 col-md-6 col-sm-6 col-xs-6 bg-dark " >
+                  <div class="card-body">
+                       <h5 class="card-title">Vibration Data&emsp;&emsp;&emsp;</h5>
+                       <div id="chartContainer2" style="height: 200px; width: 100%;"></div>
+                </div>     
+              </div>
+          </div>
+           
+        </div>
+      <!-- End of Main  -->
+      </div>
+    <!-- End of Content Wrapper -->
+    </div>
+  <!-- End of Page Wrapper -->
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" id="sidebarToggle" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <!-- Custom scripts for all pages-->
+  <script src="js/core/sb-admin-2.min.js"></script>
+  <script>
+      $("#gauge1").gauge(68,{ type: "halfcircle",color:"#ffff11"});
+      $("#gauge2").gauge(72,{ type: "halfcircle",color:"#ffff11"});
+      $("#gauge3").gauge(74,{ type: "halfcircle",color:"#ffff11"});
+      $("#gaugeText1").text("68"+"%").css("color","#ffff11");
+      $("#gaugeText2").text("72"+"%").css("color","#ffff11");
+      $("#gaugeText3").text("74"+"%").css("color","#ffff11");
+      </script>
+</body>
+</html>

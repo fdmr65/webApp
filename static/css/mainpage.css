@@ -1,0 +1,33 @@
+.main-panel {
+    position: relative;
+    float: right;
+    width: 100%;
+    min-height:50px;
+    
+   /* background-color: #000000;*/
+    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    background-image:url("../img/volt-guncel-slide-7-min.jpg");
+    background-position:90% 10%;
+}
+
+#gaugeText1,#gaugeText2,#gaugeText3
+{
+position:absolute;
+font-size: 130%;
+left: 47%;
+top: 80%;
+
+
+}
+#voltmotorImage{
+-ms-transform: rotate(15deg); /* IE 9 */
+-webkit-transform: rotate(15deg); /* Chrome, Safari, Opera */
+transform: rotate(15deg);
+}
+.table-row{
+    cursor:pointer;
+}
